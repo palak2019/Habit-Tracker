@@ -1,0 +1,127 @@
+/* General reset and box sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f5a623, #ffdd66);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: gradientAnimation 10s infinite alternate;
+}
+
+@keyframes gradientAnimation {
+    0% { background: linear-gradient(135deg, #f5a623, #ffdd66); }
+    100% { background: linear-gradient(135deg, #ffdd66, #f5a623); }
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 30px;
+    color: #333;
+}
+
+.add-habit {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    animation: slideIn 1s ease-out;
+}
+
+@keyframes slideIn {
+    0% { opacity: 0; transform: translateX(-50px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+input {
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    margin-right: 10px;
+    width: 250px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #007BFF;
+}
+
+button {
+    padding: 12px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.habit-item {
+    background-color: #f0f8ff;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.habit-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.habit-item input {
+    margin-right: 10px;
+}
+
+.habit-item button {
+    padding: 10px;
+    background-color: #ff6347;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.habit-item button:hover {
+    background-color: #e53e3e;
+}
+
+.completed {
+    background-color: #28a745;
+    color: #fff;
+    text-decoration: line-through;
+}
+
+.in-progress {
+    background-color: #f39c12;
+    color: #fff;
+}
